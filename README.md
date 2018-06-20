@@ -1,5 +1,5 @@
 # aleatory-service-draft
-Project draft for Spring Boot, which uses the math libraries Apache Commons Math4 version 4.0-SNAPSHOT, RNG version 1.1-SNAPSHOT and JUnit for the Test-Driven Development
+Project draft for Spring Boot, which uses the math libraries Apache Commons Math4 version 4.0-SNAPSHOT, RNG version 1.1-SNAPSHOT. JUnit and  for the Test-Driven Development
 
 aleatory-service-draft is a RESTful application which provides pseudo random numbers through GET requests, developed according to the Test-Driven Development dictates. 
 The web application uses the snapshots of the Apache Commons RNG and Math4 libraries.
