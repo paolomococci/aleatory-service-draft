@@ -50,4 +50,14 @@ public class AleatoryVectorControllerMockMvcTests {
         mockMvc.perform(get(PATH))
                 .andExpect(jsonPath("$").isArray());
     }
+
+    @Test
+    public void testRestControllerValueType()
+            throws Exception {
+        for (int i = 0; i < 256; i++) {
+            String temp = "$[" + i + "]";
+            mockMvc.perform(get(PATH))
+                    .andExpect(jsonPath(temp).isNumber());
+        }
+    }
 }
