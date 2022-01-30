@@ -20,7 +20,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.apache.commons:commons-math4:4.0-SNAPSHOT'
 	implementation 'org.apache.commons:commons-numbers-complex-streams:1.0-SNAPSHOT'
-	implementation 'org.apache.commons:commons-geometry-euclidean:1.0-SNAPSHOT'
+	implementation 'org.apache.commons:commons-geometry-euclidean:1.1-SNAPSHOT'
+	implementation 'org.apache.commons:commons-rng-parent:1.5-SNAPSHOT'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
