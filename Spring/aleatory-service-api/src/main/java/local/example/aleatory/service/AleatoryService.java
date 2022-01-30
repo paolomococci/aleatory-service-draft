@@ -1,13 +1,11 @@
 package local.example.aleatory.service;
 
-import org.apache.commons.math4.random.GaussianRandomGenerator;
-import org.apache.commons.math4.random.UncorrelatedRandomVectorGenerator;
+import org.apache.commons.math3.random.GaussianRandomGenerator;
+import org.apache.commons.math3.random.RandomGenerator;
+import org.apache.commons.math3.random.UncorrelatedRandomVectorGenerator;
 import org.apache.commons.rng.UniformRandomProvider;
 import org.apache.commons.rng.simple.RandomSource;
 
-import org.springframework.stereotype.Service;
-
-@Service
 public class AleatoryService {
 
     private final UniformRandomProvider uniformRandomProvider;
@@ -17,9 +15,14 @@ public class AleatoryService {
     public AleatoryService() {
         super();
         int[] seed = RandomSource.createIntArray(256);
+        // TODO, to solve: deprecated
         this.uniformRandomProvider = RandomSource.create(RandomSource.MT, seed);
-        this.gaussianRandomGenerator = new GaussianRandomGenerator(uniformRandomProvider);
-        this.uncorrelatedRandomVectorGenerator = new UncorrelatedRandomVectorGenerator(256, gaussianRandomGenerator);
+        // TODO, to solve: cannot be cast
+        this.gaussianRandomGenerator = new GaussianRandomGenerator((RandomGenerator) uniformRandomProvider);
+        this.uncorrelatedRandomVectorGenerator = new UncorrelatedRandomVectorGenerator(
+                256,
+                gaussianRandomGenerator
+        );
     }
 
     public double getUniformRandomProvider() {
