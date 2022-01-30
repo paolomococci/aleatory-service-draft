@@ -10,6 +10,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -32,5 +33,13 @@ public class AleatoryControllerMockMvcTests {
             throws Exception {
         mockMvc.perform(get(PATH))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    public void testRestControllerContentType()
+            throws Exception {
+        mockMvc.perform(get(PATH))
+                .andExpect(content()
+                        .contentType("application/json;charset=UTF-8"));
     }
 }
