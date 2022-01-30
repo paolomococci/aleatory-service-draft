@@ -9,20 +9,28 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 @SpringBootTest
 public class AleatoryRawControllerMockMvcTests {
 
     private static final String PATH = "/raw";
+
+    private MockMvc mockMvc;
 
     @Autowired
     WebApplicationContext webAppCtx;
 
     @Before
     public void setUp() {
-        MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webAppCtx).build();
+        mockMvc = MockMvcBuilders.webAppContextSetup(webAppCtx).build();
     }
 
     @Test
-    void sampleTest() {
+    public void testRestControllerStatusIsOk()
+            throws Exception {
+        mockMvc.perform(get(PATH))
+                .andExpect(status().isOk());
     }
 }
