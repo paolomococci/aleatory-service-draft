@@ -11,6 +11,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -41,5 +42,12 @@ public class AleatoryRawControllerMockMvcTests {
         mockMvc.perform(get(PATH))
                 .andExpect(content()
                         .contentType("application/json;charset=UTF-8"));
+    }
+
+    @Test
+    public void testRestControllerValueType()
+            throws Exception {
+        mockMvc.perform(get(PATH))
+                .andExpect(jsonPath("$").isNumber());
     }
 }
