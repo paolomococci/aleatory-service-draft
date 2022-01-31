@@ -14,7 +14,6 @@ public class AleatoryResourceTest {
         given()
           .when().get("/aleatory")
           .then()
-             .statusCode(200)
-             .body(is("-- feedback from aleatory service API ---"));
+             .statusCode(200);
     }
 }
