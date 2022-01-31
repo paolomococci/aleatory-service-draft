@@ -22,4 +22,14 @@ public class AleatoryResource {
         index = (int) (256 * secureRandom.nextDouble());
         return temp[index];
     }
+
+    @Route(
+            produces = MediaType.TEXT_PLAIN,
+            methods = Route.HttpMethod.GET,
+            path = "/raw"
+    )
+    public double raw() {
+        AleatoryService aleatoryService = new AleatoryService();
+        return aleatoryService.getUniformRandomProvider();
+    }
 }
