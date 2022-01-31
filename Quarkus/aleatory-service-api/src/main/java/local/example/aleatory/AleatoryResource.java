@@ -10,7 +10,7 @@ public class AleatoryResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String feedback() {
-        return "-- feedback from aleatory service API ---";
+    public String aleatory() {
+        return "0";
     }
 }
