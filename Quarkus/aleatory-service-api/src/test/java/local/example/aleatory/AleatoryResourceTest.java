@@ -24,4 +24,12 @@ public class AleatoryResourceTest {
                 .then()
                 .statusCode(200);
     }
+
+    @Test
+    public void vectorEndpointTest() {
+        given()
+                .when().get("/vector")
+                .then()
+                .statusCode(200);
+    }
 }
