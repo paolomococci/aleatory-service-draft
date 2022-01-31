@@ -1,15 +1,16 @@
 package local.example.aleatory;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import io.quarkus.vertx.web.Route;
+
 import javax.ws.rs.core.MediaType;
 
-@Path("/aleatory")
 public class AleatoryResource {
 
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Route(
+            produces = MediaType.TEXT_PLAIN,
+            methods = Route.HttpMethod.GET,
+            path = "/aleatory"
+    )
     public String aleatory() {
         return "0";
     }
