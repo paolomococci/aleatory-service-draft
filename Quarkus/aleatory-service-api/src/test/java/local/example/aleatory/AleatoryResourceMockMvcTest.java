@@ -4,4 +4,6 @@ import io.quarkus.test.junit.QuarkusTest;
 
 @QuarkusTest
 public class AleatoryResourceMockMvcTest {
+
+    private static final String PATH = "/aleatory";
 }
