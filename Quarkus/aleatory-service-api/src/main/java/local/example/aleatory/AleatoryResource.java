@@ -32,4 +32,14 @@ public class AleatoryResource {
         AleatoryService aleatoryService = new AleatoryService();
         return aleatoryService.getUniformRandomProvider();
     }
+
+    @Route(
+            produces = MediaType.TEXT_PLAIN,
+            methods = Route.HttpMethod.GET,
+            path = "/vector"
+    )
+    public double[] vector() {
+        AleatoryService aleatoryService = new AleatoryService();
+        return aleatoryService.getUncorrelatedRandomVector();
+    }
 }
