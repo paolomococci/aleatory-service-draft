@@ -1,8 +1,10 @@
 package local.example.aleatory;
 
 import io.quarkus.vertx.web.Route;
+import local.example.aleatory.service.AleatoryService;
 
 import javax.ws.rs.core.MediaType;
+import java.security.SecureRandom;
 
 public class AleatoryResource {
 
@@ -11,7 +13,13 @@ public class AleatoryResource {
             methods = Route.HttpMethod.GET,
             path = "/aleatory"
     )
-    public String aleatory() {
-        return "0";
+    public double aleatory() {
+        int index;
+        double[] temp;
+        SecureRandom secureRandom = new SecureRandom();
+        AleatoryService aleatoryService = new AleatoryService();
+        temp = aleatoryService.getUncorrelatedRandomVector();
+        index = (int) (256 * secureRandom.nextDouble());
+        return temp[index];
     }
 }
