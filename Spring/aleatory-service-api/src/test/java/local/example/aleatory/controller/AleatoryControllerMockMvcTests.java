@@ -22,11 +22,11 @@ public class AleatoryControllerMockMvcTests {
     private MockMvc mockMvc;
 
     @Autowired
-    WebApplicationContext webAppCtx;
+    WebApplicationContext webApplicationContext;
 
     @Before
     public void setUp() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(webAppCtx).build();
+        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
     @Test
