@@ -16,4 +16,12 @@ public class AleatoryResourceTest {
           .then()
              .statusCode(200);
     }
+
+    @Test
+    public void rawEndpointTest() {
+        given()
+                .when().get("/raw")
+                .then()
+                .statusCode(200);
+    }
 }
