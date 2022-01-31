@@ -10,7 +10,7 @@ import static org.hamcrest.CoreMatchers.is;
 public class AleatoryResourceTest {
 
     @Test
-    public void feedbackEndpointTest() {
+    public void aleatoryEndpointTest() {
         given()
           .when().get("/aleatory")
           .then()
