@@ -1,6 +1,7 @@
 package local.example.aleatory;
 
 import io.quarkus.test.junit.QuarkusTest;
+
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -25,9 +26,17 @@ public class AleatoryResourceTest {
     }
 
     @Test
-    public void vectorEndpointTest() {
+    public void vectorOfLongEndpointTest() {
         given()
-                .when().get("/vector")
+                .when().get("/vector-long")
+                .then()
+                .statusCode(200);
+    }
+
+    @Test
+    public void vectorOfDoubleEndpointTest() {
+        given()
+                .when().get("/vector-double")
                 .then()
                 .statusCode(200);
     }
