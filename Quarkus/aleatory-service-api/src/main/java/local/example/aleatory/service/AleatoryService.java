@@ -17,11 +17,9 @@ public class AleatoryService {
     private final UniformRandomProvider uniformRandomProvider;
     private final UncorrelatedRandomVectorGenerator uncorrelatedRandomVectorGenerator;
 
-    private final RandomGenerator randomGenerator;
     private final RandomGenerator.SplittableGenerator splittableGenerator;
 
     public AleatoryService() {
-        randomGenerator = RandomGenerator.of("L64X256MixRandom");
 
         splittableGenerator = RandomGeneratorFactory
                 .<RandomGenerator.SplittableGenerator>of("L64X256MixRandom").create();
