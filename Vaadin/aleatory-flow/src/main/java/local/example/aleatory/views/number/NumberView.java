@@ -16,15 +16,13 @@ import local.example.aleatory.views.MainLayout;
 public class NumberView
         extends HorizontalLayout {
 
-    private TextField name;
-    private Button sayHello;
+    private final TextField name;
+    private final Button sayHello;
 
     public NumberView() {
         name = new TextField("Your name");
         sayHello = new Button("Say hello");
-        sayHello.addClickListener(e -> {
-            Notification.show("Hello " + name.getValue());
-        });
+        sayHello.addClickListener(e -> Notification.show("Hello " + name.getValue()));
 
         setMargin(true);
         setVerticalComponentAlignment(Alignment.END, name, sayHello);
