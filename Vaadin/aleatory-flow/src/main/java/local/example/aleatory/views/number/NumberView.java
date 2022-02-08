@@ -17,11 +17,10 @@ public class NumberView
         extends HorizontalLayout {
 
     private final TextField name;
-    private final Button sayHello;
 
     public NumberView() {
         name = new TextField("Your name");
-        sayHello = new Button("Say hello");
+        Button sayHello = new Button("Say hello");
         sayHello.addClickListener(e -> Notification.show("Hello " + name.getValue()));
 
         setMargin(true);
