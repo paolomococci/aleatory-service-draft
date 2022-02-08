@@ -16,10 +16,12 @@ import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.html.UnorderedList;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.RouterLink;
+
 import local.example.aleatory.views.number.NumberView;
 
 @PageTitle("Main")
-public class MainLayout extends AppLayout {
+public class MainLayout
+        extends AppLayout {
 
     public static class MenuItemInfo extends ListItem {
 
@@ -105,8 +107,8 @@ public class MainLayout extends AppLayout {
     }
 
     private MenuItemInfo[] createMenuItems() {
-        return new MenuItemInfo[]{ //
-                new MenuItemInfo("Number", "la la-not-equal", NumberView.class), //
+        return new MenuItemInfo[]{
+                new MenuItemInfo("Number", "la la-not-equal", NumberView.class),
 
         };
     }
