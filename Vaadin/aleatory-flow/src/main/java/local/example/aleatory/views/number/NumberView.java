@@ -7,12 +7,14 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
+
 import local.example.aleatory.views.MainLayout;
 
 @PageTitle("Number")
 @Route(value = "number", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
-public class NumberView extends HorizontalLayout {
+public class NumberView
+        extends HorizontalLayout {
 
     private TextField name;
     private Button sayHello;
@@ -29,5 +31,4 @@ public class NumberView extends HorizontalLayout {
 
         add(name, sayHello);
     }
-
 }
