@@ -36,6 +36,7 @@ nb-configuration.xml
 .env
 
 # more
+gradle/
 *.jar
 gradlew
 gradlew.bat
