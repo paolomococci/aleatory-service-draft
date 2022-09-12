@@ -20,7 +20,6 @@ error-screenshots/
 webpack.generated.js
 
 # more
-.vscode/
 .mvn/
 icons/
 images/
