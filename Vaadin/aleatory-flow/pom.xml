@@ -13,11 +13,7 @@
 
     <properties>
         <java.version>17</java.version>
-<<<<<<< HEAD
-        <vaadin.version>23.2.3</vaadin.version>
-=======
-        <vaadin.version>23.2.2</vaadin.version>
->>>>>>> 1b34df51ab09843c096c1940a3577477a036e28f
+        <vaadin.version>23.2.4</vaadin.version>
     </properties>
 
     <parent>
